@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Шудровський Степан">
+    <title>Цифровий світ</title>
+</head>
+
+<body>
+    <h1>Компанія "Цифровий світ"</h1>
+    <p>Ми спеціалізуємося на продажу комп’ютерів та оргтехніки. У нас ви знайдете широкий вибір сучасної техніки за
+        доступними цінами.</p>
+
+    <h2>Наші комп’ютери</h2>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Назва комп’ютера</th>
+                <th>Тип процесора</th>
+                <th>Тактова частота</th>
+                <th>Відеокарта</th>
+                <th>CDROM/CDRW</th>
+                <th>Звукова карта</th>
+                <th>Обсяг вінчестера</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HP ProBook 450</td>
+                <td>Intel Core i5</td>
+                <td>2.8 GHz</td>
+                <td>NVIDIA GeForce MX250</td>
+                <td>CDRW</td>
+                <td>Realtek HD Audio</td>
+                <td>512 GB SSD</td>
+            </tr>
+            <tr>
+                <td>Dell Inspiron 15</td>
+                <td>AMD Ryzen 5</td>
+                <td>3.2 GHz</td>
+                <td>AMD Radeon Vega</td>
+                <td>CDROM</td>
+                <td>Dolby Audio</td>
+                <td>1 TB HDD</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Додати новий комп’ютер</h2>
+    <form>
+        <label>Назва комп’ютера: <input type="text" name="pc_name" required></label><br><br>
+        <label>Тип процесора: <input type="text" name="cpu" required></label><br><br>
+        <label>Тактова частота (GHz): <input type="text" name="frequency" required></label><br><br>
+        <label>Відеокарта: <input type="text" name="gpu" required></label><br><br>
+        <label>Тип пристрою CDROM/CDRW:
+            <select name="cd" required>
+                <option value="CDROM">CDROM</option>
+                <option value="CDRW">CDRW</option>
+            </select>
+        </label><br><br>
+        <label>Звукова карта: <input type="text" name="sound" required></label><br><br>
+        <label>Обсяг вінчестера (GB): <input type="number" name="storage" required></label><br><br>
+        <button type="submit">Додати</button>
+    </form>
+
+    <br>
+    <a href="index.html">Про автора</a> | <a href="news.html">Новини</a>
+</body>
+
+</html>
