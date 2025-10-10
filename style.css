@@ -211,7 +211,6 @@ td img.product-photo:hover {
     color: white;
 }
 
-/* --- НОВІ СТИЛІ ДЛЯ ЛР №3 --- */
 .custom-ol,
 .advantages-list,
 #glossary,
@@ -249,4 +248,36 @@ td img.product-photo:hover {
 
 #main-menu {
     list-style-type: circle;
+}
+
+.product-details-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.product-details-table caption {
+    padding: 10px;
+    caption-side: bottom;
+    /* align="bottom" */
+    background-color: #f0f8ff;
+    /* bgcolor */
+}
+
+.structural-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.structural-table td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9em;
+    min-height: 30px;
+}
+
+.structural-table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
