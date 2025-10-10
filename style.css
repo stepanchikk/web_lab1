@@ -1,3 +1,4 @@
+/* :root - псевдоклас для визначення глобальних CSS-змінних */
 :root {
     --primary-color: #007bff;
     --dark-text: #2c3e50;
@@ -17,7 +18,7 @@
 
 body {
     background-color: var(--light-background);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--dark-text);
     line-height: 1.6;
 }
@@ -79,7 +80,6 @@ nav a.active::after {
 nav a.active {
     color: var(--dark-text);
 }
-
 
 footer {
     text-align: center;
@@ -169,7 +169,6 @@ td img.product-photo:hover {
     transform: scale(1.1);
 }
 
-
 .news-item {
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -191,7 +190,6 @@ td img.product-photo:hover {
     transition: transform 0.3s ease;
 }
 
-/* ефект збільшення фото при наведенні */
 .news-photo:hover {
     transform: scale(1.05);
 }
@@ -210,4 +208,45 @@ td img.product-photo:hover {
 
 .read-more-btn:hover {
     background-color: #0056b3;
+    color: white;
+}
+
+/* --- НОВІ СТИЛІ ДЛЯ ЛР №3 --- */
+.custom-ol,
+.advantages-list,
+#glossary,
+#main-menu {
+    padding-left: 40px;
+}
+
+#glossary dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#glossary dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.important-step {
+    color: var(--primary-color);
+}
+
+.internal-nav {
+    background-color: var(--hover-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.promo {
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--dark-text);
+    font-weight: bold;
+}
+
+#main-menu {
+    list-style-type: circle;
 }
