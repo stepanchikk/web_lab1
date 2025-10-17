@@ -6,6 +6,7 @@
     --card-background: #ffffff;
     --border-color: #ddd;
     --hover-color: #f8f9fa;
+    --star-color: #f39c12;
 }
 
 *,
@@ -47,14 +48,15 @@ section h2 {
 nav {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.05em;
     position: relative;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -139,7 +141,7 @@ th,
 td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
     vertical-align: middle;
 }
 
@@ -149,7 +151,7 @@ thead {
 }
 
 tbody tr:last-child td {
-    border-bottom: none;
+    border-bottom: 1px solid var(--border-color);
 }
 
 tbody tr:hover {
@@ -167,6 +169,13 @@ td img.product-photo {
 
 td img.product-photo:hover {
     transform: scale(1.1);
+}
+
+caption {
+    padding: 10px;
+    font-weight: bold;
+    caption-side: bottom;
+    background-color: #f0f8ff;
 }
 
 .news-item {
@@ -250,23 +259,133 @@ td img.product-photo:hover {
     list-style-type: circle;
 }
 
-.product-details-table {
-    border-collapse: separate;
-    border-spacing: 0;
+.feedback-form {
+    padding: 20px 0;
 }
 
-.product-details-table caption {
-    padding: 10px;
-    caption-side: bottom;
-    /* align="bottom" */
-    background-color: #f0f8ff;
-    /* bgcolor */
+.feedback-form fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.feedback-form legend {
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.3em;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="datetime-local"],
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2.5em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input[type="radio"]:checked~label {
+    color: var(--star-color);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-buttons button,
+.form-buttons input[type="submit"],
+.form-buttons input[type="button"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-buttons button:hover,
+.form-buttons input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 .structural-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    border-radius: 0;
+    overflow: visible;
 }
 
 .structural-table td {
@@ -280,4 +399,5 @@ td img.product-photo:hover {
 .structural-table caption {
     font-weight: bold;
     margin-bottom: 10px;
+    background-color: transparent;
 }
