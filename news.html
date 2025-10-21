@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Шудровський Степан Вікторович">
@@ -8,7 +7,6 @@
     <title>Новини фірми "AlcoFresh"</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -16,29 +14,35 @@
                 <a href="index.html">Сторінка автора</a>
                 <a href="company.html">Про фірму</a>
                 <a href="news.html" class="active"><strong>Новини</strong></a>
+                <a href="lists.html">Деталі</a>
+                <a href="menu.html">Меню</a>
+                <a href="tables.html">Таблиці</a>
             </nav>
         </header>
         <main>
             <h1>Останні новини 📰</h1>
+
+            <marquee id="promo-line" class="promo" width="100%" bgcolor="#fff3cd" scrollamount="5" behavior="scroll">
+                🔥 Спеціальна пропозиція цього тижня: знижка 15% на весь яблучний сидр! 🔥
+            </marquee>
+
             <article class="news-item">
                 <img src="images/news-cherries.jpg" alt="Вишневий сидр" class="news-photo">
                 <h2>Новий смак: Вишневий Сидр!</h2>
-                <p>Ми запустили нову лінійку! Стара ціна на класичний сидр була змінена. Наш секрет успіху:
-                    H<sub>2</sub>O + Яблука<sup>©</sup>.</p>
+                <p>Ми запустили нову лінійку! Стара ціна на класичний сидр була змінена. Наш секрет успіху: H<sub>2</sub>O + Яблука<sup>©</sup>.</p>
                 <a href="#" class="read-more-btn">Читати більше</a>
             </article>
             <article class="news-item">
                 <img src="images/news-festival.jpg" alt="Фестиваль напоїв" class="news-photo">
                 <h2>Ми на фестивалі "Craft Drinks 2025"</h2>
-                <p>Наша компанія візьме участь у щорічному фестивалі. Це чудова можливість продегустувати наші напої.
-                </p>
+                <p>Наша компанія візьме участь у щорічному фестивалі. Це чудова можливість продегустувати наші напої.</p>
                 <a href="#" class="read-more-btn">Читати більше</a>
             </article>
         </main>
         <footer>
-            <p>© 2025 AlcoFresh. Всі права захищено.</p>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
         </footer>
     </div>
 </body>
-
 </html>
+

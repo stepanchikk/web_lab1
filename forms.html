@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Шудровський Степан Вікторович">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма відгуку - AlcoFresh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">Сторінка автора</a>
+                <a href="company.html">Про фірму</a>
+                <a href="news.html">Новини</a>
+                <a href="lists.html">Деталі</a>
+                <a href="menu.html">Меню</a>
+                <a href="tables.html">Таблиці</a>
+                <a href="forms.html" class="active"><strong>Форми</strong></a>
+                <a href="svg.html">SVG</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Залишити відгук</h1>
+            <p class="form-description">Ми цінуємо вашу думку! Будь ласка, заповніть форму нижче.</p>
+
+            <form action="javascript:void(0);" method="post" id="feedback-form" class="feedback-form"
+                title="Форма для відгуків">
+
+                <fieldset>
+                    <legend>Контактна інформація</legend>
+                    <div class="form-grid">
+                        <div>
+                            <label for="full-name" id="name-label" lang="uk">Ваше ім'я:</label>
+                            <input type="text" id="full-name" name="fullname" required size="50" maxlength="100"
+                                placeholder="Шудровський Степан" pattern="[А-Яа-яІіЇїЄєҐґ'\s]+"
+                                title="Введіть ваше повне ім'я" autocomplete="name">
+                        </div>
+                        <div>
+                            <label for="city">Ваше місто:</label>
+                            <input list="cities" id="city" name="city" size="50" placeholder="Напр., Чернівці">
+                            <datalist id="cities" dir="ltr" lang="uk">
+                                <option value="Київ">
+                                <option value="Львів">
+                                <option value="Чернівці">
+                                <option value="Харків">
+                            </datalist>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ваш відгук</legend>
+
+                    <label for="product-select">Продукт:</label>
+                    <select name="product" id="product-select">
+                        <optgroup label="Сидри" lang="uk" title="Категорія сидрів" dir="ltr">
+                            <option value="cider_apple" selected class="option-style" style="color: green;">Сидр
+                                "Яблучний бриз"</option>
+                            <option value="cider_cherry" disabled>Сидр "Вишневий" (скоро у продажу)</option>
+                        </optgroup>
+                        <optgroup label="Пивні напої" lang="uk" title="Категорія пивних напоїв">
+                            <option value="lager_summer">Пивний напій "Літній Лагер"</option>
+                        </optgroup>
+                    </select>
+
+                    <div>
+                        <p class="font-style-demo">Ваша оцінка:</p>
+                        <!-- Новий зірковий рейтинг (використовує radio) -->
+                        <div class="star-rating">
+                            <input type="radio" name="rating" value="5" id="rate-5"><label for="rate-5">★</label>
+                            <input type="radio" name="rating" value="4" id="rate-4"><label for="rate-4">★</label>
+                            <input type="radio" name="rating" value="3" id="rate-3"><label for="rate-3">★</label>
+                            <input type="radio" name="rating" value="2" id="rate-2"><label for="rate-2">★</label>
+                            <input type="radio" name="rating" value="1" id="rate-1"><label for="rate-1">★</label>
+                        </div>
+                    </div>
+
+                    <label for="review-text" style="margin-top: 15px;">Текст відгуку:</label>
+                    <textarea id="review-text" name="review" rows="6" cols="50" maxlength="1000"
+                        placeholder="Мені дуже сподобалось..." dir="ltr"></textarea>
+
+                    <label for="satisfaction">Рівень задоволення: <span id="range-value">50</span>%</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="50"
+                        oninput="document.getElementById('range-value').innerText = this.value;">
+                </fieldset>
+
+                <input type="hidden" name="form_id" value="feedback_v1">
+
+                <div class="form-buttons">
+                    <button type="submit" autofocus>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        <span>Надіслати відгук</span>
+                    </button>
+                    <input type="submit" value="Зберегти як чернетку" formtarget="_blank"
+                        style="background-color: #6c757d;">
+                </div>
+            </form>
+
+        </main>
+        <footer>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
+        </footer>
+    </div>
+</body>
+
+</html>
