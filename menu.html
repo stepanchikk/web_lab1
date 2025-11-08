@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Шудровський Степан Вікторович">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню сайту - AlcoFresh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">Сторінка автора</a>
+                <a href="company.html">Про фірму</a>
+                <a href="news.html">Новини</a>
+                <a href="menu.html" class="active"><strong>Меню</strong></a>
+            </nav>
+        </header>
+        <main>
+            <h1 id="top">Меню та карта сайту</h1>
+
+            <div class="internal-nav">
+                <p>Швидкий перехід:</p>
+                <a href="#sitemap" title="Перейти до карти сайту">Карта сайту</a> |
+                <a href="#download-section" title="Перейти до файлів">Файли для завантаження</a>
+            </div>
+
+            <section id="sitemap">
+                <h2>Карта сайту</h2>
+                <menu id="main-menu">
+                    <li>
+                        <a href="index.html" rel="author" title="Дізнатися більше про розробника" type="text/html"
+                            lang="uk-UA">Сторінка автора</a>
+                    </li>
+                    <li><a href="company.html" title="Інформація про нашу компанію">Про фірму</a></li>
+                    <li><a href="news.html" title="Останні події та анонси">Новини</a></li>
+                    <li><a href="lists.html" title="Деталі про продукцію у списках">Деталі продукції</a></li>
+                </menu>
+            </section>
+
+            <section id="download-section">
+                <h2>Файли для завантаження</h2>
+                <p>Тут ви можете завантажити наш прайс-лист.</p>
+                <a href="images/pricelist-placeholder.pdf" download="AlcoFresh-Price-List.pdf" class="read-more-btn"
+                    tabindex="0" shape="rect" title="Натисніть, щоб завантажити прайс-лист у форматі PDF">
+                    Завантажити прайс
+                </a>
+            </section>
+        </main>
+        <footer>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
+        </footer>
+    </div>
+</body>
+
+</html>
