@@ -401,3 +401,79 @@ input[type="range"]::-webkit-slider-thumb {
     margin-bottom: 10px;
     background-color: transparent;
 }
+
+section.task-section {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* Щоб виділялося на фоні */
+}
+
+/* Стилі кнопок для JS завдань */
+.task-section button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.task-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Поля вводу та результату в лабі */
+.task-section textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    font-family: monospace;
+}
+
+.task-section input[type="text"] {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Стилі для малюнків у завданні 4 */
+.image-container img {
+    transition: transform 0.3s ease, border 0.1s ease;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+/* Лог подій (чорне вікно внизу) */
+#event-log {
+    margin-top: 30px;
+    background: #222;
+    color: #0f0;
+    /* Зелений текст як у хакерів */
+    padding: 15px;
+    font-family: monospace;
+    height: 200px;
+    overflow-y: scroll;
+    /* Скрол, якщо тексту багато */
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+#event-log h3 {
+    color: #fff;
+    margin-top: 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+#logs div {
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #333;
+}
