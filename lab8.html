@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №8 - Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Автор</a>
+                <a href="company.html" class="nav-link">Про фірму</a>
+                <a href="news.html" class="nav-link">Новини</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Лабораторні ▾</button>
+                    <div class="dropdown-content">
+                        <a href="lists.html">Списки та Деталі</a>
+                        <a href="menu.html">Меню</a>
+                        <a href="tables.html">Таблиці</a>
+                        <a href="forms.html">Форми</a>
+                        <a href="svg.html">SVG</a>
+                        <a href="lab7.html">JS</a>
+                        <a href="lab8.html">Canvas</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Лабораторна робота №8: Canvas Graphics</h1>
+
+            <section class="task-section">
+                <h2>Анімація персонажа (Варіант з Лаб. 6)</h2>
+                <p>Натисніть на малюнок, щоб зупинити або запустити анімацію.</p>
+
+                <canvas id="myCanvas" width="500" height="450">
+                    Ваш браузер не підтримує Canvas.
+                </canvas>
+
+                <div class="controls">
+                    <button onclick="resetAnimation()">Скинути стан</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
+        </footer>
+    </div>
+
+    <script src="lab8.js"></script>
+</body>
+
+</html>
