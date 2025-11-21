@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медіа-бібліотека - AlcoFresh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Автор</a>
+                <a href="company.html" class="nav-link">Про фірму</a>
+                <a href="news.html" class="nav-link">Новини</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn active">Лабораторні ▾</button>
+                    <div class="dropdown-content">
+                        <a href="lists.html">Списки та Деталі</a>
+                        <a href="menu.html">Меню</a>
+                        <a href="tables.html">Таблиці</a>
+                        <a href="forms.html">Форми</a>
+                        <a href="svg.html">SVG</a>
+                        <a href="lab7.html">JS</a>
+                        <a href="lab8.html">Canvas</a>
+                        <a href="lab9.html">Media</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>Медіа-бібліотека AlcoFresh 🎬</h1>
+
+            <section class="media-section">
+                <h2>🎧 Аудіотека: Атмосфера</h2>
+                <p>Виберіть трек, щоб відчути настрій нашого виробництва.</p>
+
+                <form class="media-form">
+                    <label for="audioSelect">Вибрати трек:</label>
+                    <select id="audioSelect" onchange="changeAudio()">
+                        <option value="media/audio/cider.mp3">Звук наливання сидру</option>
+                        <option value="media/audio/bar.mp3">Шум нашого бару</option>
+                        <option value="media/audio/promo_voice.mp3">Рекламний голос</option>
+                    </select>
+                </form>
+
+                <figure class="media-player-container">
+                    <audio id="myAudioPlayer" controls>
+                        <source src="media/audio/cider.mp3" type="audio/mpeg">
+                        Ваш браузер не підтримує елемент audio.
+                    </audio>
+                    <figcaption>Зараз грає: <span id="audioCaption">Звук наливання сидру</span></figcaption>
+                </figure>
+            </section>
+
+            <section class="media-section">
+                <h2>🎥 Відео-презентації</h2>
+                <p>Подивіться, як ми створюємо наші напої.</p>
+
+                <form class="media-form">
+                    <label for="videoSelect">Вибрати відео:</label>
+                    <select id="videoSelect" onchange="changeVideo()">
+                        <option value="media/video/promo.mp4">Промо-ролик</option>
+                    </select>
+                </form>
+
+                <figure class="media-player-container">
+                    <video id="myVideoPlayer" width="100%" height="auto" controls preload="metadata">
+                        <source src="media/video/promo.mp4" type="video/mp4">
+                        Ваш браузер не підтримує елемент video.
+                    </video>
+                    <figcaption>Перегляд: <span id="videoCaption">Промо-ролик 2025</span></figcaption>
+                </figure>
+            </section>
+
+            <section class="media-section">
+                <h2>🌐 Ми на YouTube (iFrame)</h2>
+                <p>Вбудоване відео з нашого каналу:</p>
+
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gvD-QKcHXks?"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
+        </footer>
+    </div>
+
+    <script src="lab9.js"></script>
+</body>
+
+</html>

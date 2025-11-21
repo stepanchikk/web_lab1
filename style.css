@@ -1,0 +1,495 @@
+
+:root {
+    --primary-color: #007bff;
+    /* Основний синій */
+    --primary-dark: #0056b3;
+    /* Темно-синій для ховера */
+    --dark-text: #2c3e50;
+    /* Темний текст */
+    --light-background: #f4f7f6;
+    /* Фон сторінки */
+    --card-background: #ffffff;
+    /* Фон контейнера */
+    --border-color: #ddd;
+    /* Колір рамок */
+    --hover-color: #f8f9fa;
+    /* Світлий фон при наведенні */
+    --star-color: #f39c12;
+    /* Колір зірочок рейтингу */
+    --console-bg: #222;
+    /* Фон консолі JS */
+    --console-text: #0f0;
+    /* Текст консолі JS */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+    min-height: 80vh;
+}
+
+
+header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-link {
+    color: var(--dark-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Стилі випадаючого меню */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--dark-text);
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropbtn,
+.dropbtn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-content a {
+    color: var(--dark-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0.95em;
+    transition: 0.2s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: menuFade 0.3s;
+}
+
+@keyframes menuFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+h2 {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+    color: #777;
+}
+
+img {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.3s ease;
+
+    display: block;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.promo {
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--dark-text);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    /* Clearfix для float */
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-photo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.news-photo:hover {
+    transform: scale(1.05);
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ========================================= */
+/* 6. СПИСКИ ТА МЕНЮ (lists.html, menu.html) */
+/* ========================================= */
+.custom-ol,
+.advantages-list,
+#glossary,
+#main-menu {
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+#glossary dt {
+    font-weight: bold;
+    margin-top: 15px;
+    color: var(--primary-dark);
+}
+
+#glossary dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #eee;
+}
+
+.internal-nav {
+    background-color: var(--hover-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+}
+
+/* ========================================= */
+/* 7. ТАБЛИЦІ (tables.html, company.html)    */
+/* ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+caption {
+    padding: 10px;
+    font-weight: bold;
+    caption-side: bottom;
+    background-color: #f0f8ff;
+}
+
+/* Фото продукції в таблицях */
+td img.product-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+td img.product-photo:hover {
+    transform: scale(1.2);
+}
+
+/* Складна таблиця */
+.structural-table td {
+    text-align: center;
+}
+
+/* ========================================= */
+/* 8. ФОРМИ (forms.html)                     */
+/* ========================================= */
+.feedback-form fieldset,
+.task-section {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Сітка для форми */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Рейтинг і кнопки */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input:checked~label {
+    color: var(--star-color);
+}
+
+button,
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ========================================= */
+/* 9. ЛАБОРАТОРНА 7 (JS Console)             */
+/* ========================================= */
+#event-log {
+    margin-top: 30px;
+    background: var(--console-bg);
+    color: var(--console-text);
+    padding: 15px;
+    font-family: "Courier New", monospace;
+    height: 200px;
+    overflow-y: scroll;
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+#event-log h3 {
+    color: white;
+    border-bottom: 1px dashed #555;
+    margin-top: 0;
+}
+
+/* ========================================= */
+/* 10. ЛАБОРАТОРНА 8 (Canvas)                */
+/* ========================================= */
+canvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px dashed var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: crosshair;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Карта (Company.html) */
+.map-container {
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
