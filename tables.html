@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Шудровський Степан Вікторович">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Характеристики продукції - AlcoFresh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">Сторінка автора</a>
+                <a href="company.html">Про фірму</a>
+                <a href="news.html">Новини</a>
+                <a href="lists.html">Деталі</a>
+                <a href="menu.html">Меню</a>
+                <a href="tables.html" class="active"><strong>Таблиці</strong></a>
+            </nav>
+        </header>
+        <main>
+            <h1>Характеристики продукції у таблицях</h1>
+
+            <section>
+                <h2>Детальний склад напоїв</h2>
+
+                <table class="product-details-table" summary="Детальний склад та харчова цінність напоїв AlcoFresh"
+                    rules="groups" border="1" cellpadding="10" cellspacing="0">
+
+                    <caption title="Склад продукції" align="bottom" bgcolor="#f0f8ff">Таблиця 1. Склад та характеристики
+                    </caption>
+
+                    <thead class="table-header" lang="uk" dir="ltr">
+                        <tr>
+                            <th id="th-product" axis="product" class="header-cell" style="width: 25%;">Напій</th>
+                            <th id="th-composition" axis="composition">Склад</th>
+                            <th id="th-strength" axis="strength" style="text-align: center;">Міцність (%)</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot style="background-color: #f8f9fa;" dir="ltr">
+                        <tr>
+                            <td colspan="3">Інформація надана для ознайомлення.</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody title="Основна інформація" align="left" char=".">
+                        <tr id="row-cider" style="vertical-align: top;">
+                            <td headers="th-product" axis="product">Сидр "Яблучний бриз"</td>
+                            <td headers="th-composition" axis="composition">Сік яблучний зброджений, вода, цукор.</td>
+                            <td headers="th-strength" axis="strength" style="text-align: center;">4.5</td>
+                        </tr>
+                        <tr id="row-lager">
+                            <td headers="th-product" axis="product">Пивний напій "Літній Лагер"</td>
+                            <td headers="th-composition" axis="composition">Вода, солод ячмінний, хміль, екстракт лайма.
+                            </td>
+                            <td headers="th-strength" axis="strength" style="text-align: center;">4.2</td>
+                        </tr>
+                        <tr id="row-punch">
+                            <td headers="th-product" axis="product" rowspan="2">Ягідні напої</td>
+                            <td headers="th-composition" axis="composition">Ягідний пунш "Лісова казка": сік журавлини,
+                                вода, спирт, екстракт м'яти.</td>
+                            <td headers="th-strength" axis="strength" style="text-align: center;">5.0</td>
+                        </tr>
+                        <tr id="row-punch-cherry">
+                            <td headers="th-composition" axis="composition">Вишневий пунш: сік вишні, вода, спирт,
+                                кориця.</td>
+                            <td headers="th-strength" axis="strength" style="text-align: center;">5.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Квартальний звіт виробництва та дистрибуції</h2>
+
+                <table class="structural-table" border="1">
+                    <caption>Звіт за Q3 2025 (Варіант №23)</caption>
+                    <tr>
+                        <td colspan="2" rowspan="1">Продукція</td>
+                        <td colspan="2">Місяць</td>
+                        <td rowspan="3">Всього (шт.)</td>
+                        <td colspan="2">Вироблено (тис. шт.)</td>
+                        <td rowspan="12" style="writing-mode: vertical-rl; text-orientation: mixed;">ЗАХІДНИЙ РЕГІОН
+                        </td>
+                        <td colspan="2">Канал збуту</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2">Категорія</td>
+                        <td colspan="2">Липень</td>
+                        <td colspan="2" rowspan="2">План/Факт</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Серпень</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" style="writing-mode: vertical-rl; text-orientation: mixed;">СИДРИ</td>
+                        <td>Яблучний</td>
+                        <td>Т1</td>
+                        <td>Т2</td>
+                        <td>Т3</td>
+                        <td>Т4</td>
+                        <td>120</td>
+                        <td rowspan="5">Супермаркети</td>
+                        <td rowspan="5">HoReCa</td>
+                    </tr>
+                    <tr>
+                        <td>Грушевий</td>
+                        <td>25</td>
+                        <td>28</td>
+                        <td>26</td>
+                        <td>31</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>Вишневий</td>
+                        <td>15</td>
+                        <td>14</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>Сливовий</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>Полуничний</td>
+                        <td>20</td>
+                        <td>22</td>
+                        <td>21</td>
+                        <td>24</td>
+                        <td>87</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" rowspan="2">Загальний підсумок по виробництву за квартал</td>
+                        <td colspan="2">Онлайн</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Офлайн</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">Всього вироблено: 418 тис. шт.</td>
+                        <td colspan="2">Експорт</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Контроль якості</td>
+                        <td colspan="5">Пройдено: 99.8%</td>
+                        <td colspan="2">Повернення: 0.2%</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <address>© 2025 AlcoFresh. Всі права захищено.</address>
+        </footer>
+    </div>
+</body>
+
+</html>
