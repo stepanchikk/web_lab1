@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 - Варіант 23</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="logEvent('Сторінка повністю завантажена (onload)')"
+    onresize="logEvent('Розмір вікна змінено (onresize)')">
+
+<header>
+    <nav>
+        <a href="index.html" class="active">Сторінка автора</a>
+        <a href="company.html">Про фірму</a>
+        <a href="news.html">Новини</a>
+        <a href="lists.html">Деталі</a>
+        <a href="menu.html">Меню</a>
+        <a href="tables.html">Таблиці</a>
+        <a href="forms.html">Форми</a>
+        <a href="svg.html">SVG</a>
+        <a href="lab7.html"><strong>JS (Лаба 7)</strong></a>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Лабораторна робота №7. Варіант 23</h1>
+
+        <section class="task-section">
+            <h2>Завдання 2: Динамічні стилі (Наведіть або клікніть)</h2>
+            <h3 id="dynamic-header" onclick="changeHeaderColor(this)" onmouseover="addUnderline(this)"
+                onmouseout="removeUnderline(this)">
+                Клікніть мене, щоб змінити колір!
+            </h3>
+            <p>
+                Спробуйте навести на <b onmouseover="makeItalic(this)" onmouseout="removeItalic(this)">цей жирний
+                    текст</b>.
+            </p>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 3.1: Інформація про браузер</h2>
+            <form name="browserForm">
+                <button type="button" onclick="showBrowserInfo()">Run Task (Get Browser Info)</button>
+                <br><br>
+                <textarea id="browser-output" rows="4" cols="50" placeholder="Тут з'явиться інформація..."></textarea>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 4: Ефекти для зображень</h2>
+            <div class="image-container">
+                <img src="data:image/jpeg;base64,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" alt="Приклад" onmouseover="zoomIn(this)"
+                    onmouseout="zoomOut(this)" onmousedown="changeBorder(this, 'red')"
+                    onmouseup="changeBorder(this, 'none')">
+                <p><small>Наведіть мишку для збільшення, натисніть для рамки.</small></p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 5.3: Пошук цифр у тексті</h2>
+            <form name="regexForm">
+                <input type="text" id="regex-input" placeholder="Введіть текст з цифрами (напр. Рік 2025)" size="40">
+                <button type="button" onclick="findDigits()">Знайти цифри</button>
+                <p id="regex-result">Результат: </p>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 6.8: Обробка масиву</h2>
+            <p>Задано масив. Першу половину елементів помножити на 2, а другу - на 3.</p>
+            <form name="arrayForm">
+                <label>Введіть числа через кому:</label>
+                <input type="text" id="array-input" value="1, 2, 3, 4, 5, 6, 7, 8">
+                <button type="button" onclick="processArray()">Array Task</button>
+                <br><br>
+                <textarea id="array-output" rows="4" cols="50" placeholder="Результат..."></textarea>
+            </form>
+        </section>
+
+        <div id="event-log">
+            <h3>Лог подій (Завдання 1):</h3>
+            <div id="logs"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
